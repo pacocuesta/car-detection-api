@@ -4,7 +4,8 @@
   "description": "API to detect cars in images using AI",
   "main": "index.js",
   "scripts": {
-    "dev": "python3 -m http.server 8000",
+    "dev": "node -e \"const http = require('http'); const fs = require('fs'); const path = require('path'); const server = http.createServer((req, res) => { if (req.url === '/') { res.writeHead(200, {'Content-Type': 'text/html'}); res.end('<h1>Car Detection API</h1><p>Server is running on port 8000</p><p>Use the Python API by running: python3 run_api.py</p>'); } else { res.writeHead(404, {'Content-Type': 'text/plain'}); res.end('Not Found'); } }); server.listen(8000, () => console.log('Development server running at http://localhost:8000'));\"",
+    "start-api": "python3 run_api.py",
     "test": "python3 -m pytest tests/ -v",
     "test-watch": "python3 -m pytest tests/ -v --tb=short -f"
   },
