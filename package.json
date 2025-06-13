@@ -1,0 +1,14 @@
+{
+  "name": "car-detection-api",
+  "version": "1.0.0",
+  "description": "API to detect cars in images using AI",
+  "main": "index.js",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "test": "python3 -m pytest tests/ -v",
+    "test-watch": "python3 -m pytest tests/ -v --tb=short -f"
+  },
+  "keywords": ["car-detection", "ai", "computer-vision"],
+  "author": "",
+  "license": "MIT"
+}
